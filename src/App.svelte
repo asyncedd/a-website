@@ -67,6 +67,5 @@
 </style>
 
 <main>
-  <h1>Welcome to my Svelte App</h1>
-  <p>This is some sample content.</p>
+  <h1>await</h1>
 </main>
