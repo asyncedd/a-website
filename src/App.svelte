@@ -36,11 +36,13 @@
     padding-bottom: var(--s);
     background: 
       linear-gradient(90deg,
-      #94e2d5 10%,
-      #89dceb 20%,
-      #74c7ec 30%, 
-      #89b4fa 40%,
-      #b4befe 50%,
+      #a6e3a1 1%,
+      #94e2d5 5%,
+      #89dceb 10%,
+      #74c7ec 20%,
+      #89b4fa 30%,
+      #b4befe 40%,
+      #cba6f7 50%,
       #1e1e2e 0) calc(100% - var(--_p,0%))/200% 100%,
       linear-gradient(
       #89dceb 0
