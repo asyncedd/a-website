@@ -28,7 +28,8 @@
     color: #0000;
     padding-bottom: var(--s);
     background: 
-      linear-gradient(90deg,var(--c) 50%,#1e1e2e 0) calc(100% - var(--_p,0%))/200% 100%;
+      linear-gradient(90deg,var(--c) 50%,#1e1e2e 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
     -webkit-background-clip: text,padding-box;
     background-clip: text,padding-box;
     transition: 0.5s;
