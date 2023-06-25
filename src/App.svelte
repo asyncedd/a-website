@@ -2,70 +2,51 @@
 
 <script></script>
 
+<main>
+  <div class="container">
+    <h1 class="hover-text">await</h1>
+  </div>
+</main>
+
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-  :global(body) {
-    background-color: var(--background-color);
-    height: 100vh;
-    margin: 0;
-    display: flex; /* Use flexbox for centering */
-    align-items: center;
-    justify-content: center;
-  }
-
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Poppins", sans-serif;
-  }
-
-  /* Set the text color to white */
-  :global(h1, h2, h3, h4, h5, h6, p, a) {
-    color: var(--text-color);
-  }
-
-  main {
-    text-align: center; /* Center align the content */
-  }
-
-  h1 {
-    --s: 0.1em;   /* the thickness of the line */
-
-    color: #0000;
-    padding-bottom: var(--s);
-    background: 
-      linear-gradient(90deg,
-      #a6e3a1 1%,
-      #94e2d5 5%,
-      #89dceb 10%,
-      #74c7ec 20%,
-      #89b4fa 30%,
-      #b4befe 40%,
-      #cba6f7 50%,
-      #1e1e2e 0) calc(100% - var(--_p,0%))/200% 100%,
-      linear-gradient(
-      #89dceb 0
-      0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
-    background-clip: text,padding-box;
-    transition: 0.5s;
-    font-family: "Poppins", sans-serif;
-    font-size: 5rem;
-    cursor: pointer;
-  }
-
-  h1:hover {
-    --_p: 100%;
-    font-size: 6rem; /* Increase the font size when hovered */
-  }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
   :root {
-    --background-color: #11111b;
+    --primary-color: #89dceb;
+    --background-color: #1e1e2e;
+    --secondary-background-color: #313244;
     --text-color: #cdd6f4;
   }
-</style>
 
-<main>
-  <h1>await</h1>
-</main>
+  :global(body) {
+    text-align: center;
+    background-color: var(--background-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+  }
+
+  :global(.container) {
+    margin-top: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  ::selection {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    filter: blur(3px);
+    border-radius: 5px;
+  }
+
+  :global(.hover-text) {
+    font-size: 32px;
+    transition: font-size 0.3s;
+  }
+
+  :global(.hover-text:hover) {
+    font-size: 64px;
+  }
+</style>
