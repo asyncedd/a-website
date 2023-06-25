@@ -61,16 +61,17 @@
   h1:before {
     content: "await";
     position: absolute;
-    color: var(--primary-color);
     -webkit-text-stroke: 0px transparent;
     top: 25rem;
     left: 0;
-    width: 0%;
+    width: 100%;
     overflow: hidden;
     transition: all 0.5s;
+    color: transparent;
   }
 
   h1:hover:before {
+    color: var(--primary-color);
     width: 103%;
   }
 
@@ -81,7 +82,7 @@
     -webkit-text-stroke: 0px transparent;
     top: 23rem;
     left: 0;
-    width: 0%;
+    width: 100%;
     overflow: hidden;
     transition: all 0.5s;
     z-index: -1;
