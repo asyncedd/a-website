@@ -21,6 +21,7 @@
 <style>
   :root {
     --primary-color: #89dceb;
+    --surface0: #313244;
     --background-color: #1e1e2e;
     --secondary-background-color: #313244;
     --text-color: #cdd6f4;
@@ -50,10 +51,25 @@
 
   :global(.hover-text) {
     font-size: 64px;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, color 0.3s;
   }
 
   :global(.hover-text:hover) {
     font-size: 96px;
+    color: var(--surface0);
+  }
+
+  :global(h1:before) {
+    content: "await";
+    position: absolute;
+    color: var(--primary-color);
+    top: 26rem;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  :global(h1:hover:before) {
+    width: 103%;
   }
 </style>
