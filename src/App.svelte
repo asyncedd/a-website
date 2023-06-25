@@ -42,11 +42,11 @@
   }
 
   :global(.hover-text) {
-    font-size: 32px;
+    font-size: 64px;
     transition: font-size 0.3s;
   }
 
   :global(.hover-text:hover) {
-    font-size: 64px;
+    font-size: 96px;
   }
 </style>
