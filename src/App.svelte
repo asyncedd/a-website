@@ -37,7 +37,6 @@
   ::selection {
     background-color: var(--primary-color);
     color: var(--background-color);
-    filter: blur(3px);
     border-radius: 5px;
   }
 
