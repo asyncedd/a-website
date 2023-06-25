@@ -49,18 +49,20 @@
 
   .hover-text {
     font-size: 64px;
-    transition: font-size 0.3s, color 0.3s;
+    transition: font-size 0.3s, color 0.3s, -webkit-text-stroke 0.3s;
   }
 
   .hover-text:hover {
     font-size: 96px;
-    color: var(--surface0);
+    -webkit-text-stroke: 3px var(--surface0);
+    color: transparent;
   }
 
   h1:before {
     content: "await";
     position: absolute;
     color: var(--primary-color);
+    -webkit-text-stroke: 0px transparent;
     top: 26rem;
     left: 0;
     width: 0%;
@@ -70,5 +72,9 @@
 
   h1:hover:before {
     width: 103%;
+  }
+
+  h1 {
+    -webkit-text-stroke: 0px var(--text-color);
   }
 </style>
