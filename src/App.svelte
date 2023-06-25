@@ -1,6 +1,14 @@
 <!-- App.svelte -->
 <script>
-  import { onMount } from "svelte";
+  import { onMount, createEventDispatcher } from "svelte";
+
+  let showSquare = false;
+
+  const dispatch = createEventDispatcher();
+
+  function handleClick() {
+    showSquare = !showSquare;
+  }
 
   onMount(() => {
     const link = document.createElement("link");
@@ -13,7 +21,12 @@
 
 <main>
   <div class="container">
-    <h1 class="hover-text">await</h1>
+    <h1 class="hover-text" on:click={handleClick}>await</h1>
+    {#if showSquare}
+      <div class="square">
+        <span class="square-text">Hi 👋</span>
+      </div>
+    {/if}
   </div>
 </main>
 
@@ -96,5 +109,26 @@
 
   h1 {
     -webkit-text-stroke: 0px var(--text-color);
+  }
+
+  .square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 75%;
+    background-color: var(--secondary-background-color);
+    z-index: 1;
+    border-radius: 5%;
+  }
+
+  .square-text {
+    position: relative; /* Change position to relative */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; /* Add the margin-top property here */
   }
 </style>
