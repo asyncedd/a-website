@@ -59,7 +59,7 @@
   }
 
   h1:before {
-    content: "await";
+    content: "async";
     position: absolute;
     -webkit-text-stroke: 0px transparent;
     top: 25rem;
