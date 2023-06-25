@@ -1,6 +1,16 @@
 <!-- App.svelte -->
 
-<script></script>
+<script>
+  import { onMount } from "svelte";
+
+  onMount(async () => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap";
+    document.head.appendChild(link);
+  });
+</script>
 
 <main>
   <div class="container">
@@ -9,8 +19,6 @@
 </main>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
-
   :root {
     --primary-color: #89dceb;
     --background-color: #1e1e2e;
