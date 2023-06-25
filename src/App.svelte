@@ -1,9 +1,8 @@
 <!-- App.svelte -->
-
 <script>
   import { onMount } from "svelte";
 
-  onMount(async () => {
+  onMount(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href =
@@ -30,12 +29,11 @@
   :global(body) {
     text-align: center;
     background-color: var(--background-color);
-    background: var(--background-color);
     color: var(--text-color);
     font-family: "Poppins", sans-serif;
   }
 
-  :global(.container) {
+  .container {
     margin-top: 22.5rem;
     display: flex;
     justify-content: center;
@@ -49,17 +47,17 @@
     border-radius: 5px;
   }
 
-  :global(.hover-text) {
+  .hover-text {
     font-size: 64px;
     transition: font-size 0.3s, color 0.3s;
   }
 
-  :global(.hover-text:hover) {
+  .hover-text:hover {
     font-size: 96px;
     color: var(--surface0);
   }
 
-  :global(h1:before) {
+  h1:before {
     content: "await";
     position: absolute;
     color: var(--primary-color);
@@ -69,7 +67,8 @@
     overflow: hidden;
     transition: all 0.5s;
   }
-  :global(h1:hover:before) {
+
+  h1:hover:before {
     width: 103%;
   }
 </style>
