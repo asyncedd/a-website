@@ -27,7 +27,7 @@
   }
 
   :global(.container) {
-    margin-top: 25rem;
+    margin-top: 22.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
